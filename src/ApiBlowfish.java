@@ -65,9 +65,7 @@ public class ApiBlowfish {
 
 		dechiffre.init(Cipher.DECRYPT_MODE, clef);
 
-		byte[] textDechiffre = dechiffre.doFinal(textChiffre);
-
-		return textDechiffre;// retourne au format octet
+		return dechiffre.doFinal(textChiffre);// retourne au format octet
 	}
 
 	/**
